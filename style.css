@@ -1,0 +1,78 @@
+body{
+    background-color: #97D2EC;
+}
+
+main{
+    display: flex;
+    align-items: center;
+    margin-top: 100px;
+    flex-direction: column;
+}
+
+#titulo{
+    font-weight: bold;
+}
+
+#texto-temperatura{
+    font-size: 40px;
+}
+
+#texto-tempo{
+    font-weight: 600;
+}
+
+#imagem-tempo{
+    width: 10rem;
+    padding: 10px;
+}
+
+#info{
+    display: flex;
+    flex-direction: column;
+    font-weight: lighter;
+}
+
+.flex-info{
+    display: flex;
+    width: auto;
+}
+
+#flex-informacoes {
+    display: flex;
+    gap: 40px;
+}
+
+/* Pra parar de distorcer imagem */
+#flex-informacoes img{
+    align-self: flex-start;
+    margin-right: 8px;
+}
+
+#cartao{
+    box-shadow: 2px 7px 8px 5px rgba(0,0,0,0.47);
+    border: none;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+#flex-chance-chuva{
+    display: flex;
+}
+
+.chance-chuva-horas{
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+}
+
+.chance-chuva-horas p{
+    margin-left: 8px;
+}
+
+
+#cartao-horas{
+    overflow-x: scroll;
+    border: none;
+}
+
+
