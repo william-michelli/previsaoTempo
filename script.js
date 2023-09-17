@@ -84,85 +84,102 @@ let imagemChanceChuva24 = document.getElementById('imagem-chance-chuva24')
         textoChanceChuva22.textContent = dataTemperatura.hourly.precipitation_probability[22] + '%'
         textoChanceChuva24.textContent = dataTemperatura.hourly.precipitation_probability[24] + '%'
 
+
         if(dataTemperatura.current_weather.weathercode == 0){
             textoTempo.textContent = 'Tempo Limpo'
             imagemTempo.src = 'images/sun.gif'
             cartao.style.borderLeft = '20px solid #97D2EC' //Dia claro
+            document.body.style.backgroundColor = '#adedf8'//Sol
 
             //DIA LIMPO - CONFERE SE É DIA OU
             if(dataTemperatura.current_weather.is_day == 0){
                 imagemTempo.src = 'images/night.gif'
                 cartao.style.borderLeft = '20px solid #25316D' //Noite ou chuva
+                document.body.style.backgroundColor = '#3e4fa1'//Chuva
             }
             if(dataTemperatura.current_weather.is_day == 1){
                 imagemTempo.src = 'images/sun.gif'
                 cartao.style.borderLeft = '20px solid #97D2EC' //Dia claro
+                document.body.style.backgroundColor = '#adedf8'//Sol
             }
         }
         if(dataTemperatura.current_weather.weathercode == 1){
             textoTempo.textContent = 'Parcialmente Limpo'  
             imagemTempo.src = 'images/partly-cloudy.gif'
             cartao.style.borderLeft = '20px solid #5F6F94' //Nublado
+            document.body.style.backgroundColor = '#8091b8'//Nublado
         }
         if(dataTemperatura.current_weather.weathercode == 2){
             textoTempo.textContent = 'Parcialmente Nublado'  
             imagemTempo.src = 'images/partly-cloudy.gif'
             cartao.style.borderLeft = '20px solid #5F6F94' //Nublado
+            document.body.style.backgroundColor = '#8091b8'//Nublado
         }
         if(dataTemperatura.current_weather.weathercode == 3){
             textoTempo.textContent = 'Nublado'  
             imagemTempo.src = 'images/partly-cloudy.gif'
             cartao.style.borderLeft = '20px solid #5F6F94' //Nublado
+            document.body.style.backgroundColor = '#8091b8'//Nublado
         }
         if(dataTemperatura.current_weather.weathercode == 45 || dataTemperatura.current_weather.weathercode == 48){
             textoTempo.textContent = 'Névoa'
             imagemTempo.src = 'images/partly-cloudy.gif'
             cartao.style.borderLeft = '20px solid #5F6F94' //Nublado  
+            document.body.style.backgroundColor = '#8091b8'//Nublado
         }
         if(dataTemperatura.current_weather.weathercode == 51){
             textoTempo.textContent = 'Garoa Leve' 
             imagemTempo.src = 'images/rain.gif'
             cartao.style.borderLeft = '20px solid #25316D' //Noite ou chuva 
+            document.body.style.backgroundColor = '#3e4fa1'//Chuva
         }
         if(dataTemperatura.current_weather.weathercode == 53){
             textoTempo.textContent = 'Garoa Moderada'  
             imagemTempo.src = 'images/rain.gif'
             cartao.style.borderLeft = '20px solid #25316D' //Noite ou chuva
+            document.body.style.backgroundColor = '#3e4fa1'//Chuva
         }
         if(dataTemperatura.current_weather.weathercode == 55){
             textoTempo.textContent = 'Garoa Forte' 
             imagemTempo.src = 'images/rain.gif' 
             cartao.style.borderLeft = '20px solid #25316D' //Noite ou chuva
+            document.body.style.backgroundColor = '#3e4fa1'//Chuva
         }
         if(dataTemperatura.current_weather.weathercode == 61){
             textoTempo.textContent = 'Chuva Leve' 
             imagemTempo.src = 'images/rain.gif'
             cartao.style.borderLeft = '20px solid #25316D' //Noite ou chuva 
+            document.body.style.backgroundColor = '#3e4fa1'//Chuva
         }
         if(dataTemperatura.current_weather.weathercode == 63){
             textoTempo.textContent = 'Chuva Moderada'
             imagemTempo.src = 'images/rain.gif'  
             cartao.style.borderLeft = '20px solid #25316D' //Noite ou chuva
+            document.body.style.backgroundColor = '#3e4fa1'//Chuva
         }
         if(dataTemperatura.current_weather.weathercode == 65){
             textoTempo.textContent = 'Chuva Forte'
             imagemTempo.src = 'images/rain.gif'  
             cartao.style.borderLeft = '20px solid #25316D' //Noite ou chuva
+            document.body.style.backgroundColor = '#3e4fa1'//Chuva
         }
         if(dataTemperatura.current_weather.weathercode >= 71 && dataTemperatura.current_weather.weathercode <= 77){
             textoTempo.textContent = 'Neve'  
             imagemTempo.src = 'images/rain.gif'
             cartao.style.borderLeft = '20px solid #25316D' //Noite ou chuva
+            document.body.style.backgroundColor = '#3e4fa1'//Chuva
         }
         if(dataTemperatura.current_weather.weathercode >= 80 && dataTemperatura.current_weather.weathercode <= 82){
             textoTempo.textContent = 'Pancadas de Chuva' 
             imagemTempo.src = 'images/rain.gif'
             cartao.style.borderLeft = '20px solid #25316D' //Noite ou chuva 
+            document.body.style.backgroundColor = '#3e4fa1'//Chuva
         }
         if(dataTemperatura.current_weather.weathercode == 95){
             textoTempo.textContent = 'Tempestade' 
             imagemTempo.src = 'images/storm.gif'
             cartao.style.borderLeft = '20px solid #25316D' //Noite ou chuva 
+            document.body.style.backgroundColor = '#3e4fa1'//Chuva
         }
 
 

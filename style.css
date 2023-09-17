@@ -1,5 +1,6 @@
 body{
-    background-color: #97D2EC;
+    background-color:white;
+    transition: 2s;
 }
 
 main{
@@ -53,6 +54,9 @@ main{
     border: none;
     opacity: 0;
     transition: opacity 0.5s;
+    padding: 0px 10px;
+    width: 50%; 
+    max-width: 540px;
 }
 
 #flex-chance-chuva{
@@ -76,3 +80,63 @@ main{
 }
 
 
+ /* width */
+ ::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  } 
+
+  @media screen and (max-width:767px) {
+    #texto-temperatura{
+        text-align: center;
+    }
+    #texto-tempo{
+        text-align: center;
+    }
+  }
+
+  @media screen and (max-width:640px) {
+    #cartao{
+        width: 55%; 
+    }
+
+    #texto-temperatura{
+        text-align: center;
+    }
+    #texto-tempo{
+        text-align: center;
+    }
+  }
+
+  @media screen and (max-width:580px) {
+    #cartao{
+        width: 60%; 
+    }
+  }
+
+  
+  @media screen and (max-width:532px) {
+    #cartao{
+        width: 70%; 
+    }
+  }
+
+  @media screen and (max-width:370px) {
+    #cartao{
+        width: 90%; 
+    }
+  }
