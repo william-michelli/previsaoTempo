@@ -4,6 +4,7 @@ let textoTemperatura = document.getElementById('texto-temperatura')
 let textoVentos = document.getElementById('texto-ventos')
 let textoChanceChuva = document.getElementById('texto-chance-chuva')
 let cartao = document.getElementById('cartao')
+let localizacao = document.getElementById('localizacao')
 
 let textoChanceChuva0 = document.getElementById('texto-chance-chuva0')
 let textoChanceChuva2 = document.getElementById('texto-chance-chuva2')
@@ -52,6 +53,7 @@ let imagemChanceChuva24 = document.getElementById('imagem-chance-chuva24')
         //Reverse Geolocation
         let resGeo = await  fetch(`https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${lat}&longitude=${lng}&localityLanguage=en`)
         let dataGeo = await resGeo.json()
+        localizacao.textContent = `${dataGeo.city}, ${dataGeo.countryName}`
         console.log(`Você esta em ${dataGeo.city}, ${dataGeo.countryName}`)
 
         // let resTemperatura = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lng}&current_weather=true&hourly=temperature_2m,windspeed_10m,precipitation_probability,rain&forecast_days=1`) 
