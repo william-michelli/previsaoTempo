@@ -1,6 +1,11 @@
 body{
     background-color:white;
     transition: 2s;
+    /* background-image: url('images/sunny.jpg');
+    background-image: url('images/cloudy.jpg');
+    background-image: url('images/rain.jpg');
+    background-image: url('images/night.jpg'); */
+    background-size:100%;
 }
 
 main{
